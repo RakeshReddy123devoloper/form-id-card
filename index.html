@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <form action="" id="form1">
+        <fieldset>
+            <legend>ID CARD DETAILS</legend>
+            <LABEL></LABEL>
+            <input id="first" type="text" placeholder="First name">
+            <input id="second" type="text"placeholder="last name"> <br><br>
+            <input id="rollno" type="text" placeholder="roll no">
+            <input id="batch" type="text" placeholder="Batch No"><br><br>
+            <input id="degree" type="text" placeholder="degree and YOP ">
+            <input id="course" type="text" placeholder="course"> <br><br>
+            <input id="mobileno" type="text" placeholder="mobile No">
+            <input id="duration" type="text" placeholder="Duration"> <br><br>
+            <input id="image" type="file" >
+            <input id="reset" type="submit" value="Reset">
+            <input id="submit" type="submit" >
+
+        </fieldset>
+        
+    </form>
+
+
+    <form>
+      <fieldset>
+          <legend>ID CARD DETAILS</legend>
+          <label>enter name:</label>
+          <label id="fname" ></label>
+          <label id="sname"></label> <br><br>
+          <label>Roll no:</label>
+          <label id="rlno">_</label><br><br>
+          <label>batch no:</label>
+          <label id="fbatch"></label><br><br>
+          <label id="fdegree" type="text" placeholder="degree and YOP "></label>
+          <input id="course" type="text" placeholder="course"> <br><br>
+          <input id="mobileno" type="text" placeholder="mobile No">
+          <input id="duration" type="text" placeholder="Duration"> <br><br>
+          <img id="img" style="width: 100px; height: 100px;">
+          <!-- <input id="reset" type="submit" value="Reset"> -->
+          <!-- <input id="submit" type="submit" > -->
+
+      </fieldset>
+      
+  </form>
+</div>
+ 
+
+<script>
+let form1=document.getElementById("form1")
+    form1.addEventListener("submit",(event)=>{
+      event.preventDefault();
+      first=document.getElementById("first").value;
+      fname=document.getElementById("fname")
+      fname.innerHTML= first;
+      second=document.getElementById("second").value;
+      sname=document.getElementById("sname")
+      sname.innerHTML=second
+      rollno=document.getElementById("rollno").value;
+      rlno=document.getElementById("rlno");
+      rlno.innerHTML=rollno;
+
+batch=document.getElementById("batch").value;
+batch1=document.getElementById("fbatch");
+batch1.innerHTML=batch;
+
+      Imageinput=document.getElementById("image");
+      img=document.getElementById("img")
+      img.src=URL.createObjectURL(Imageinput.files[0]);
+      
+    } )
+
+    
+    form1.addEventListener("Reset",()=>{
+
+        
+    })
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
